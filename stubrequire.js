@@ -23,20 +23,23 @@
  *   foo();  // returns undefined, not 42.
  */
 var stubber = require('./stubber');
-var proxyquire = require('proxyquire');
 
 function makeModuleStub(moduleName) {
-  var m = stubber(require(moduleName));
+  var m = stubber(module.parent.require(moduleName));
   m['@global'] = true;
   return m;
 }
 
-module.exports = function(modulesToStub) {
+function makeStubRequire(modulesToStub) {
+  console.log(module.parent.id);
   var stubs = {};
   modulesToStub.forEach(function(moduleName) {
     stubs[moduleName] = makeModuleStub(moduleName);
   });
+  var proxyquire = module.parent.require('proxyquire');
   return function(moduleName) {
     return proxyquire(moduleName, stubs);
   };
 };
+
+module.exports = makeStubRequire;
