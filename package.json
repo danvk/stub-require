@@ -1,5 +1,5 @@
 {
-  "name": "stubrequire",
+  "name": "stub-require",
   "version": "0.1.0",
   "description": "Automatically stub modules via proxyquire",
   "dependencies": {
