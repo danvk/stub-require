@@ -1,5 +1,6 @@
 {
   "name": "stubrequire",
+  "version": "0.1.0",
   "description": "Automatically stub modules via proxyquire",
   "dependencies": {
     "proxyquire": "^1.0.1",
@@ -7,5 +8,8 @@
   },
   "devDependencies": {
     "mocha": "^2.0.1"
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }
