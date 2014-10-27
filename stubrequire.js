@@ -15,9 +15,7 @@
  *   };
  *
  *   // foo-test.js
- *   var stubRequire = require('stubrequire')({
- *     autoStub: ['BigComplexModule']
- *   }),
+ *   var stubRequire = require('stubrequire')(['BigComplexModule']),
  *       foo = stubRequire('./foo');
  *
  *   foo();  // returns undefined, not 42.
