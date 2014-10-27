@@ -31,7 +31,6 @@ function makeModuleStub(moduleName) {
 }
 
 function makeStubRequire(modulesToStub) {
-  console.log(module.parent.id);
   var stubs = {};
   modulesToStub.forEach(function(moduleName) {
     stubs[moduleName] = makeModuleStub(moduleName);
