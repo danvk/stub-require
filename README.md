@@ -1,4 +1,4 @@
-stubrequire
+stub-require
 ===========
 
 Automatically create stubbed-out versions of node.js modules, ala Jest's autoMock.
@@ -34,5 +34,5 @@ methods as the original, but all stubbed out.
 Installation
 
 ```
-npm install --save-dev stubrequire
+npm install --save-dev stub-require
 ```
