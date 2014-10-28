@@ -10,12 +10,16 @@ Usage:
 module.exports = {
   foo: function() { return 42; }
 };
+```
 
+```javascript
 // foo.js
 module.exports = function() {
   return require('./BigComplexModule').foo();
 };
+```
 
+```javascript
 // foo-test.js
 var stubRequire = require('stubrequire')(['BigComplexModule']),
     foo = stubRequire('./foo');
